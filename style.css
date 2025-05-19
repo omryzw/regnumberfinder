@@ -1,0 +1,48 @@
+body {
+  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+.container {
+  padding: 0 !important;
+}
+.card {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  margin: 1.5rem 0;
+}
+@media (max-width: 576px) {
+  .card {
+    padding: 1.2rem 0.5rem !important;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.10);
+  }
+  .input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #searchInput, #searchBtn {
+    border-radius: 2rem !important;
+    font-size: 1.1rem;
+  }
+  #searchBtn {
+    width: 100%;
+    margin-top: 0.2rem;
+  }
+}
+#searchInput:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25);
+}
+#result {
+  font-size: 1.3rem;
+  min-height: 2em;
+  transition: color 0.2s;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #4f8cff 0%, #1e40af 100%);
+  border: none;
+}
+.btn-primary:active, .btn-primary:focus {
+  background: #1e40af;
+}

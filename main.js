@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
       resultDiv.textContent = `Plate number ${normalized} was FOUND!, Sorry`;
       resultDiv.className = 'text-danger';
     } else {
-      resultDiv.textContent = `Congrats , Plate number ${normalized} not found. `;
+      resultDiv.textContent = `Congrats , Plate number ${normalized} was not found. `;
       resultDiv.className = 'text-success';
     }
   }

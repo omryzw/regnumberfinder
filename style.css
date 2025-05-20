@@ -11,6 +11,55 @@ body {
   border-radius: 2rem;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   margin: 1.5rem 0;
+  border: none;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.22);
+}
+.input-group {
+  gap: 0.5rem;
+}
+#searchInput, #searchBtn {
+  border-radius: 2rem !important;
+  font-size: 1.1rem;
+}
+#searchInput {
+  background: #f3f6fa;
+  border: 1.5px solid #b6c6e3;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#searchInput:focus {
+  border-color: #4f8cff;
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,.15);
+  background: #fff;
+}
+#result {
+  font-size: 1.3rem;
+  min-height: 2em;
+  transition: color 0.2s;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #4f8cff 0%, #1e40af 100%);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+}
+.btn-primary:active, .btn-primary:focus {
+  background: #1e40af;
+}
+.footer {
+  background: transparent;
+  font-size: 1.05rem;
+  margin-top: 2rem;
+}
+.footer a {
+  text-decoration: underline wavy #4f8cff 2px;
+  transition: color 0.2s;
+}
+.footer a:hover {
+  color: #1e40af;
 }
 @media (max-width: 576px) {
   .card {
@@ -23,26 +72,13 @@ body {
     gap: 0.5rem;
   }
   #searchInput, #searchBtn {
-    border-radius: 2rem !important;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   #searchBtn {
     width: 100%;
     margin-top: 0.2rem;
   }
-}
-#searchInput:focus {
-  box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25);
-}
-#result {
-  font-size: 1.3rem;
-  min-height: 2em;
-  transition: color 0.2s;
-}
-.btn-primary {
-  background: linear-gradient(90deg, #4f8cff 0%, #1e40af 100%);
-  border: none;
-}
-.btn-primary:active, .btn-primary:focus {
-  background: #1e40af;
+  .footer {
+    font-size: 0.98rem;
+  }
 }

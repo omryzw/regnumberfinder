@@ -46,4 +46,23 @@ document.addEventListener('DOMContentLoaded', function() {
   searchInput.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') searchPlate();
   });
+
+  // Share button logic
+  const shareBtn = document.getElementById('shareBtn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', function() {
+      const text = resultDiv.textContent || "Check out this cool plate number search!";
+      if (navigator.share) {
+        navigator.share({
+          title: 'Plate Number Search',
+          text: text,
+          url: window.location.href
+        });
+      } else {
+        navigator.clipboard.writeText(`${text} ${window.location.href}`);
+        shareBtn.textContent = "Copied!";
+        setTimeout(() => shareBtn.textContent = "📤 Share Result", 1500);
+      }
+    });
+  }
 });

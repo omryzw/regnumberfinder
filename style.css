@@ -61,6 +61,23 @@ body {
 .footer a:hover {
   color: #1e40af;
 }
+.ad-banner {
+  padding: 3px;
+  border-radius: 6px;
+  background: #f8f9fa;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.ad-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s;
+}
+.ad-banner img:hover {
+  opacity: 0.9;
+}
 @media (max-width: 576px) {
   .card {
     padding: 1.2rem 0.5rem !important;
@@ -80,5 +97,9 @@ body {
   }
   .footer {
     font-size: 0.98rem;
+  }
+  .ad-banner {
+    margin: 0 auto;
+    max-width: 100%;
   }
 }
